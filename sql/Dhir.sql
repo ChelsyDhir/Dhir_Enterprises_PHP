@@ -14,11 +14,15 @@ create table Admin (
 --Create table Customer
 create table Customer (
     customer_id INT(3) AUTO_INCREMENT PRIMARY KEY,
-    phone varchar(50),
+    phone varchar(50) Unique,
     name varchar(50),
     address varchar(50),
+    gst_number varchar(20),
     password varchar(255)
 ) Engine=InnoDB;
+
+insert into Customer (customer_id, phone, name, address, gst_number, password)
+ values (1000, 2366658956, 'Chelsy', 'Punjab', '123456789652', '12345');
 
 --Create table Order
 create table Order (

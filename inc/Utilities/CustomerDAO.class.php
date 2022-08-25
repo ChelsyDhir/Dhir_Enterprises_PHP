@@ -14,8 +14,8 @@ class CustomerDAO  {
     static function createCustomer(Customer $newCustomer)  {
        
         //This is Statement:
-        $sql = "INSERT INTO Customer (phone, name, address, password)
-                VALUES (:phone, :name, :address, :password)";
+        $sql = "INSERT INTO Customer (phone, name, address, gst_number, password)
+                VALUES (:phone, :name, :address, :gst_number, :password)";
 
         // QUERY 
         self::$db->query($sql);
@@ -24,6 +24,7 @@ class CustomerDAO  {
         self::$db->bind(':phone', $newCustomer->getPhone());
         self::$db->bind(':name', $newCustomer->getName());
         self::$db->bind(':address', $newCustomer->getAddress());
+        self::$db->bind(':gst_number', $newCustomer->getGstNumber());
         self::$db->bind(':password', $newCustomer->getPassword());
 
         //EXECUTE
@@ -33,7 +34,7 @@ class CustomerDAO  {
         return self::$db->lastInsertedId();
     }
     
-    static function getCustomerName($CustomerID){
+    static function getCustomer($CustomerID){
         $sql = "SELECT name FROM Customer WHERE customer_id=:customer_id";
         self::$db->query($sql);
         self::$db->bind(':customer_id', $CustomerID);
@@ -44,7 +45,7 @@ class CustomerDAO  {
     
     static function getCustomers() : Array {
 
-        $sql = "SELECT * from customer";
+        $sql = "SELECT * from Customer";
         //Prepare the Query
         self::$db->query($sql);
         //execute the query
@@ -60,6 +61,7 @@ class CustomerDAO  {
         $sql = "UPDATE customer SET name=:name, 
                      phone=:phone,
                      address=:address,
+                     gst_number=:gst_number,
                      password=:password
                      WHERE customer_id=:customer_id";
                 
@@ -70,6 +72,7 @@ class CustomerDAO  {
         self::$db->bind(':name', $CustomerToUpdate->getName());
         self::$db->bind(':phone', $CustomerToUpdate->getPhone());
         self::$db->bind(':address', $CustomerToUpdate->getAddress());
+        self::$db->bind(':gst_number', $CustomerToUpdate->getGstNumber());
         self::$db->bind(':password', $CustomerToUpdate->getPassword());
 
         self::$db->execute();

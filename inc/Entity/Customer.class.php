@@ -14,6 +14,7 @@ class Customer {
     private $phone;
     private $name;
     private $address;
+    private $gst_number;
     private $password;
 
     //setters to the set/create/register the admin
@@ -27,6 +28,10 @@ class Customer {
 
     function setName($name) {
         $this->name = $name;
+    }
+
+    function setGstNumber($gst_number) {
+        $this->gst_number = $gst_number;
     }
 
     function setAddress($address) {
@@ -52,6 +57,10 @@ class Customer {
     
     function getAddress() {
         return $this->address;
+    }
+
+    function getGstNumber() {
+        return $this->gst_number;
     }
 
     function getPassword() {
