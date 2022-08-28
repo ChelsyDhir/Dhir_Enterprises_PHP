@@ -35,7 +35,7 @@ class CustomerDAO  {
     }
     
     static function getCustomer($CustomerID){
-        $sql = "SELECT name FROM Customer WHERE customer_id=:customer_id";
+        $sql = "SELECT * FROM Customer WHERE customer_id=:customer_id";
         self::$db->query($sql);
         self::$db->bind(':customer_id', $CustomerID);
         self::$db->execute();

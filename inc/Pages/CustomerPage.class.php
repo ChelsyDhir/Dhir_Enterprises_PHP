@@ -75,7 +75,7 @@ class CustomerPage {
         ?>
         <section class="form1">
                 <h3>Add a New Customer in the list</h3>
-                <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
+                <form action="<?php $_SERVER["PHP_SELF"]?>" method="post">
                     <table>
                         <tr>
                             <td>Customer Name</td>
@@ -106,29 +106,30 @@ class CustomerPage {
 static function editCustomer(Customer $CustomerToEdit)   { 
     ?>
     <section class="form1">
-            <h3>Edit a Customer in the list</h3>
-            <form action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
+            <h3>Editing customer with ID: <?= $CustomerToEdit->getCustomerID()?></h3>
+            <form action="<?php $_SERVER["PHP_SELF"]?>" method="post">
                 <table>
                     <tr>
                         <td>Customer Name</td>
-                        <td><input type="text" name="name" id="name" placeholder="Name" value= <?php $CustomerToEdit->getName()?> ></td>
+                        <td><input type="text" name="name" id="name" placeholder="Name" value= <?= $CustomerToEdit->getName()?> ></td>
                     </tr>
                     <tr>
                         <td>Phone</td>
-                        <td><input type="text" name="phone" id="phone" placeholder="(XXX) XXX XXXX" required value= <?php $CustomerToEdit->getPhone()?>></td>
+                        <td><input type="text" name="phone" id="phone" placeholder="(XXX) XXX XXXX" required value= <?= $CustomerToEdit->getPhone()?> ></td>
                     </tr>     
                     <tr>
                         <td>Address</td>
-                        <td><input type="text" name="address" id="address" placeholder="Address" value=<?php $CustomerToEdit->getAddress()?>></td>
+                        <td><input type="text" name="address" id="address" placeholder="Address" value= <?= $CustomerToEdit->getAddress()?> ></td>
                     </tr>  
                     <tr>
                         <td>GST Number</td>
-                        <td><input type="text" name="gst" id="gst" placeholder="GST Number" value=<?php $CustomerToEdit->getGstNumber()?>></td>
+                        <td><input type="text" name="gst" id="gst" placeholder="GST Number" value= <?= $CustomerToEdit->getGstNumber()?> ></td>
                     </tr>                                          
                     
-                </table>                                        
+                </table>   
+                <input type="hidden" name="CustID" value=<?= $CustomerToEdit->getCustomerID()?>>                                     
                 <input type="hidden" name="action" value="edit">
-                <input type="submit" value="Update Customer">
+                <input type="submit" value="Submit">
             </form>
         </section>
 

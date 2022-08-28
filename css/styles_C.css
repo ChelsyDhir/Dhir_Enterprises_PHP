@@ -37,7 +37,7 @@ section{
     padding: 5px 10px;
 }
 section.main{
-    width: 65%;
+    width: 100%;
     /*
     grid-row:1/2;
     grid-column: 1/2;*/

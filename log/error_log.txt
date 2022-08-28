@@ -147,3 +147,45 @@ Stack trace:
 #0 D:\RealWorld(DE)\Dhir\Admin_Customers.php(38): CustomerPage::editCustomer(false)
 #1 {main}
   thrown in D:\RealWorld(DE)\Dhir\inc\Pages\CustomerPage.class.php on line 106
+[26-Aug-2022 02:48:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2366658956' for key 'phone' in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php(31): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Customers.php(22): CustomerDAO::createCustomer(Object(Customer))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[26-Aug-2022 02:56:17 Europe/Berlin] PHP Warning:  Undefined property: Customer::$CustomerID in D:\RealWorld(DE)\Dhir\inc\Pages\CustomerPage.class.php on line 109
+[26-Aug-2022 02:57:35 Europe/Berlin] PHP Warning:  Undefined array key "customer_id" in D:\RealWorld(DE)\Dhir\inc\Pages\CustomerPage.class.php on line 109
+[26-Aug-2022 06:11:40 Europe/Berlin] PHP Warning:  Undefined property: Customer::$Phone in D:\RealWorld(DE)\Dhir\inc\Pages\CustomerPage.class.php on line 118
+[26-Aug-2022 06:12:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot access private property Customer::$phone in D:\RealWorld(DE)\Dhir\inc\Pages\CustomerPage.class.php:118
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Customers.php(41): CustomerPage::editCustomer(Object(Customer))
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\CustomerPage.class.php on line 118
+[26-Aug-2022 08:03:25 Europe/Berlin] PHP Warning:  Undefined variable $newCustomer in D:\RealWorld(DE)\Dhir\Admin_Customers.php on line 45
+[26-Aug-2022 08:03:25 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: CustomerDAO::createCustomer(): Argument #1 ($newCustomer) must be of type Customer, null given, called in D:\RealWorld(DE)\Dhir\Admin_Customers.php on line 45 and defined in D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php:14
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Customers.php(45): CustomerDAO::createCustomer(NULL)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php on line 14
+[27-Aug-2022 03:37:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php(77): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Customers.php(31): CustomerDAO::updateCustomer(Object(Customer))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[27-Aug-2022 03:39:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php(76): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Customers.php(31): CustomerDAO::updateCustomer(Object(Customer))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[27-Aug-2022 03:39:40 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php(76): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Customers.php(31): CustomerDAO::updateCustomer(Object(Customer))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
