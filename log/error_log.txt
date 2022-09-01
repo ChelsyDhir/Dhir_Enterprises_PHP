@@ -189,3 +189,103 @@ Stack trace:
 #2 D:\RealWorld(DE)\Dhir\Admin_Customers.php(31): CustomerDAO::updateCustomer(Object(Customer))
 #3 {main}
   thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[29-Aug-2022 01:22:47 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dhir_enterprises.orderdetails' doesn't exist in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php(118): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(21): OrdersDAO::getOrdersDetails()
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[29-Aug-2022 01:26:15 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'orderdetails.OrderID' in 'field list' in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php(118): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(21): OrdersDAO::getOrdersDetails()
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[29-Aug-2022 04:38:01 Europe/Berlin] PHP Warning:  Undefined variable $current_order_id in D:\RealWorld(DE)\Dhir\Admin_Orders.php on line 32
+[29-Aug-2022 04:43:01 Europe/Berlin] PHP Warning:  Undefined variable $newOrder in D:\RealWorld(DE)\Dhir\Admin_Orders.php on line 38
+[29-Aug-2022 04:43:01 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: OrderDetailsDAO::createOrderDetails(): Argument #1 ($newOrderDetails) must be of type OrderDetails, null given, called in D:\RealWorld(DE)\Dhir\Admin_Orders.php on line 38 and defined in D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php:14
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(38): OrderDetailsDAO::createOrderDetails(NULL)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php on line 14
+[29-Aug-2022 04:46:46 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 22
+[29-Aug-2022 04:46:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 22
+[29-Aug-2022 04:47:18 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 22
+[29-Aug-2022 04:47:18 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 22
+[29-Aug-2022 04:47:51 Europe/Berlin] PHP Warning:  Undefined global variable $_SESSION in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 22
+[29-Aug-2022 04:47:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 22
+[29-Aug-2022 04:48:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php(26): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(31): OrdersDAO::createOrder()
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[29-Aug-2022 04:57:31 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php(26): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(31): OrdersDAO::createOrder()
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[29-Aug-2022 04:59:00 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orders`, CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php(26): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(31): OrdersDAO::createOrder()
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[29-Aug-2022 05:18:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getCustomerID() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:55
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[29-Aug-2022 05:20:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getName() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:56
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 56
+[29-Aug-2022 05:20:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getItemName() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:57
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 57
+[29-Aug-2022 05:20:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getPrice() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:58
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 58
+[29-Aug-2022 05:21:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getQuantity() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:59
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[29-Aug-2022 05:51:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getCustomerID() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:55
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[29-Aug-2022 05:57:58 Europe/Berlin] PHP Warning:  Undefined property: Orders::$CustomerID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[29-Aug-2022 05:57:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getName() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:56
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 56
+[29-Aug-2022 05:58:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getName() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:56
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 56
+[29-Aug-2022 06:00:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getPrice() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:60
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(43): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 60
+[29-Aug-2022 06:10:02 Europe/Berlin] PHP Warning:  Undefined array key "o" in D:\RealWorld(DE)\Dhir\Admin_Orders.php on line 29
+[29-Aug-2022 06:10:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: OrdersDAO::deleteOrder(): Argument #1 ($customer_id) must be of type string, null given, called in D:\RealWorld(DE)\Dhir\Admin_Orders.php on line 29 and defined in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php:145
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(29): OrdersDAO::deleteOrder(NULL)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 145

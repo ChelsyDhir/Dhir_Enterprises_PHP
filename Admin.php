@@ -6,7 +6,7 @@ if(isset($_GET['admin'])){
         header("location: Admin_Customers.php");
     } 
     elseif($_GET['admin'] && $_GET['admin'] == "orders") {
-        header("Location: ");
+        header("Location: Admin_Orders.php");
     }
     elseif($_GET['admin'] && $_GET['admin'] == "stocks") {
         header("Location: ");

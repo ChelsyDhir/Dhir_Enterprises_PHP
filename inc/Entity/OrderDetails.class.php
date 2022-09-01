@@ -11,10 +11,11 @@ create table Order_Details (
 
 <?php
 
-    class Order_Details {
+    class OrderDetails {
 
         private $record_id;
         private $order_id;
+        private $customer_id;
         private $item_id;
         private $price;
         private $quantity;
@@ -25,6 +26,10 @@ create table Order_Details (
 
         function setOrderID($order_id) {
             $this->order_id = $order_id;
+        }
+
+        function setCustomerID($customer_id) {
+            $this->customer_id = $customer_id;
         }
 
         function setItemID($item_id) {
@@ -45,6 +50,10 @@ create table Order_Details (
         
         function getOrderID() {
             return $this->order_id;
+        }    
+            
+        function getCustomerID() {
+            return $this->customer_id;
         }
         
         function getItemID() {
