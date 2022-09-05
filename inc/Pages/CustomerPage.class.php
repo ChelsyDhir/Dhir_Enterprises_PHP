@@ -19,6 +19,7 @@ class CustomerPage {
 
     static function showFooter()   { ?>        
         </div>
+            ---- Click here to add/view <a href="Admin_Orders.php">Orders</a>
             </body>
         </html>
     <?php }

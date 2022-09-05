@@ -35,6 +35,7 @@ class OrdersPage {
                     <th>Customer ID</th>
                     <th>Customer Name</th>
                     <th>Item</th>
+                    <th>Size</th>
                     <th>Price</th>
                     <th>Number of Items</th>  
                     <th>Total Cost</th>
@@ -55,6 +56,7 @@ class OrdersPage {
                     echo "<td>".$order->customer_id."</td>";                    
                     echo "<td>".$order->name."</td>";
                     echo "<td>".$order->item_name."</td>";
+                    echo "<td>".$order->size."</td>";
                     echo "<td>$".$order->price."</td>";
                     echo "<td>".$order->quantity."</td>";
                     $totalPrice = number_format($order->price * $order->quantity, 2);
@@ -98,7 +100,11 @@ class OrdersPage {
                         <?php  } ?>
                            </select>
                         </td>                    
-                    </tr>     
+                    </tr> 
+                    <tr>
+                        <td>Size</td>
+                        <td><input type="text" name="size" id="size" placeholder="Size of the Item" required></td>
+                    </tr>    
                     <tr>
                         <td>Price</td>
                         <td><input type="text" name="price" id="price" placeholder="Price" required></td>

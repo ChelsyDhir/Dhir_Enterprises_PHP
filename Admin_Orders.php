@@ -34,6 +34,7 @@ if(!empty($_POST)){
         $newOrder->setOrderID(OrdersDAO::createOrder());
         $newOrder->setCustomerID($_POST['name']);
         $newOrder->setItemID($_POST['item']);
+        $newOrder->setSize($_POST['size']);
         $newOrder->setPrice($_POST['price']);
         $newOrder->setQuantity($_POST['qty']);
 

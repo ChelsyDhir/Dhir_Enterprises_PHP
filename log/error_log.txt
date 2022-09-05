@@ -289,3 +289,197 @@ Stack trace:
 #0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(29): OrdersDAO::deleteOrder(NULL)
 #1 {main}
   thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php on line 145
+[03-Sep-2022 06:00:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '9436534825' for key 'phone' in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php(31): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Customers.php(22): CustomerDAO::createCustomer(Object(Customer))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:14:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:15:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:19:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`)) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:19:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:22:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:23:06 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:23:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:23:53 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 06:23:56 Europe/Berlin] PHP Warning:  Undefined property: Customer::$CustomerID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 90
+[03-Sep-2022 06:23:56 Europe/Berlin] PHP Warning:  Undefined property: Customer::$CustomerID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 90
+[03-Sep-2022 06:24:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot access private property Customer::$customer_id in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:90
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(45): OrdersPage::addOrder(Array, Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 90
+[03-Sep-2022 06:24:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 07:42:58 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 08:00:20 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 08:00:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 08:02:36 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`dhir_enterprises`.`orderdetails`, CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE) in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrderDetailsDAO.class.php(32): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(41): OrderDetailsDAO::createOrderDetails(Object(OrderDetails))
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
+[03-Sep-2022 08:22:04 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:22:04 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:22:18 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:22:18 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:22:18 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:22:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getSize() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:59
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(46): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:06 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:06 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:06 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:06 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:06 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:10 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:10 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:10 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:10 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:11 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:11 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:11 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:12 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:12 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:13 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:23:58 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:26:04 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:26:12 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:26:12 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:27:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getSize() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:59
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(46): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:28:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getSize() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:59
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(46): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:28:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Orders::getSize() in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php:59
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(46): OrdersPage::listAllOrders(Array)
+#1 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:26 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:26 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:26 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:26 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:26 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:37 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:37 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:37 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:37 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:30:37 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:31:47 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:31:47 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:31:47 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:31:47 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[03-Sep-2022 08:31:47 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:27 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:27 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:27 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:27 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:27 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:30 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:30 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:30 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:30 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:30 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:31 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$OrderID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$OrderID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$OrderID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$OrderID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$OrderID in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 55
+[04-Sep-2022 05:29:57 Europe/Berlin] PHP Warning:  Undefined property: Orders::$size in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 59

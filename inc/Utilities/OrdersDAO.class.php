@@ -108,7 +108,7 @@ class OrdersDAO  {
 
         $sql = "SELECT orderdetails.order_id, 
                 orderdetails.customer_id,     customer.name, 
-                item.item_name,         orderdetails.price, 
+                item.item_name, orderdetails.size, orderdetails.price, 
                 orderdetails.quantity   FROM orderdetails 
                 JOIN orders on orderdetails.order_id = orders.order_id
                 JOIN Customer on customer.customer_id = orderdetails.customer_id

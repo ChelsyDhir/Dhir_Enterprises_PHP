@@ -14,8 +14,8 @@ class OrderDetailsDAO  {
     static function createOrderDetails(OrderDetails $newOrderDetails)  {
        
         //This is Statement:
-        $sql = "INSERT INTO OrderDetails (order_id, item_id, customer_id, price, quantity)
-                VALUES (:order_id, :item_id, :customer_id, :price, :quantity)";
+        $sql = "INSERT INTO OrderDetails (order_id, item_id, customer_id, size, price, quantity)
+                VALUES (:order_id, :item_id, :customer_id, :size, :price, :quantity)";
 
         // QUERY 
         self::$db->query($sql);
@@ -23,6 +23,7 @@ class OrderDetailsDAO  {
         // BIND 
         self::$db->bind(':order_id', $newOrderDetails->getOrderID());
         self::$db->bind(':item_id', $newOrderDetails->getItemID());
+        self::$db->bind(':size', $newOrderDetails->getSize());
         self::$db->bind(':customer_id', $newOrderDetails->getCustomerID());
         self::$db->bind(':price', $newOrderDetails->getPrice());
         self::$db->bind(':quantity', $newOrderDetails->getQuantity());

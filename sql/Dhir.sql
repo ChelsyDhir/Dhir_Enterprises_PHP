@@ -61,7 +61,7 @@ create table OrderDetails (
     size varchar(20),
     price DOUBLE,
     quantity INT,
-    FOREIGN KEY (customer_id) REFERENCES Customer (customer_id),
+    FOREIGN KEY (customer_id) REFERENCES Customer (customer_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (order_id) REFERENCES Orders (order_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (item_id) REFERENCES Item (item_id) ON DELETE CASCADE ON UPDATE CASCADE
 ) Engine=InnoDB;

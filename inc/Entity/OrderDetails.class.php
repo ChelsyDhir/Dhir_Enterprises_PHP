@@ -2,7 +2,8 @@
 create table Order_Details (
     record_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
-    item_id INT,
+    item_id INT,    
+    size varchar(20),
     price DOUBLE,
     quantity INT,
     FOREIGN KEY (order_id) REFERENCES Orders (order_id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17,6 +18,7 @@ create table Order_Details (
         private $order_id;
         private $customer_id;
         private $item_id;
+        private $size;
         private $price;
         private $quantity;
 
@@ -35,6 +37,10 @@ create table Order_Details (
         function setItemID($item_id) {
             $this->item_id = $item_id;
         } 
+
+        function setSize($size) {
+            $this->size = $size;
+        }
 
         function setPrice($price) {
             $this->price = $price;
@@ -58,6 +64,10 @@ create table Order_Details (
         
         function getItemID() {
             return $this->item_id;
+        }
+
+        function getSize() {
+            return $this->size;
         }
 
         function getPrice() {
