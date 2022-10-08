@@ -8,8 +8,7 @@ h1{
     font-size: 60px;
     color: rgb(130, 132, 187);
     /* background-image: linear-gradient(to right, #553c9a 45%, #ee4b2b);     */
-    background-color: azure;
-    text-align:left;
+    text-align:center;
     font-family:Georgia, 'Times New Roman', Times, serif;
     /* text-shadow: 0px 4px 10px rgba(179, 147, 211, 0.8); */
     width: 100%;
@@ -39,17 +38,21 @@ section{
 }
 section.main{
     width: 100%;
+    padding-top: 20px;
     /*grid-row:1/2;
     grid-column: 1/2;*/
     border-right: 1px dotted black;
     min-height: 500px;
 }
 section.form1{
-    width: 35%;/*
+    width: 25%;
+    /*
     grid-row:1/2;
     grid-column: 2/3;*/
 }
-
+section.topmain{
+    width: 65%;/*
+}
 h4{
     display:inline-block;
     padding: 12px 20px;

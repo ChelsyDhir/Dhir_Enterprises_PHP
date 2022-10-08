@@ -43,7 +43,17 @@ if(!empty($_POST)){
 }
 
 OrdersPage::addOrder(CustomerDAO::getCustomers(), ItemDAO::getItems());
-OrdersPage::listAllOrders(OrdersDAO::getOrdersDetails());
+OrdersPage::listAllOrders(OrdersDAO::getOrders());
+
+
+if(isset($_GET['action']) && $_GET['action'] == 'details'){
+
+    OrdersPage::listOrdersDetails(OrdersDAO::getOrdersDetails());
+
+}
+
+
+
 // var_dump(OrdersDAO::getOrdersDetails());
 
 ?>

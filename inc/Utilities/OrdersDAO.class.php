@@ -85,24 +85,24 @@ class OrdersDAO  {
 
     // }
 
-    // static function getOrder(string $OrderID)  {
+    static function getOrders()  {
 
-    //     //This is statement
-    //     $sql = "SELECT * from Orders WHERE OrderID = :orderID";
+        //This is statement
+        $sql = "SELECT orders.order_id, orderdetails.customer_id, 
+        customer.name, orders.date from Orders join orderdetails on 
+        orders.order_id = orderdetails.order_id join customer on
+        customer.customer_id = orderdetails.customer_id;";
          
-    //     //QUERY
-    //     self::$db->query($sql);
+        //QUERY
+        self::$db->query($sql);
 
-    //     //BIND
-    //     self::$db->bind(':orderID', $OrderID);
+        //EXECUTE
+        self::$db->execute();
 
-    //     //EXECUTE
-    //     self::$db->execute();
+        //RETURN (the single result)
+        return self::$db->resultSet();
 
-    //     //RETURN (the single result)
-    //     return self::$db->singleResult();
-
-    // }
+    }
 
     static function getOrdersDetails() : Array {
 

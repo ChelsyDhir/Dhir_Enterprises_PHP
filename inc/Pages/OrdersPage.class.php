@@ -23,11 +23,11 @@ class OrdersPage {
         </html>
     <?php }
 
-    static function listAllOrders(Array $orders) {
+    static function listOrdersDetails(Array $orders) {
         ?>
         <!-- Start the page's show data form -->
         <section class="main">
-        <!-- <h2>List of all Orders</h2> -->
+        <!-- <h2>Listing details of a perticular Order</h2> -->
         <table id="list">
             <thead>
                 <tr>
@@ -76,6 +76,46 @@ class OrdersPage {
             </section>';
   
     }
+
+    static function listAllOrders($CustomerOrders) {?>
+        <!-- Start the page's show data form -->
+        <section class="topmain">
+        <h2>List all Orders</h2>
+        <table id="list">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Date</th>
+                    <th>Details</th>
+            </thead>
+            <?php
+
+            $i=0;
+            foreach($CustomerOrders as $order)  {
+
+                if($i%2==1)
+                    echo"<tbody class=\"evenRow\">";
+                else
+                    echo"<tbody class=\"oddRow\">";
+            
+                    echo "<tr>";
+                echo "<td>".$order->getOrderID()."</td>";
+                echo "<td>".$order->customer_id."</td>";                    
+                echo "<td>".$order->name."</td>";
+                echo "<td>".$order->getdate()."</td>";
+                $detailLink = $_SERVER['PHP_SELF']."?action=details&order_id=".$order->getOrderID();
+
+                echo "<td><a href=\"".$detailLink."\">&#9997</a></td>";
+
+                echo "</tr>";
+                $i++;
+            } 
+            echo'</tbody>';
+            echo '</table>
+            </section>';
+        }
 
     static function addOrder(array $customers, array $items)   { 
         ?>
