@@ -25,14 +25,20 @@ main_page();
 
 function main_page(){
     ?>
+
+    
+    <div class="tab">
+    <a href=<?= $_SERVER['PHP_SELF']."?admin=login"?> class="tablinks">Login</button>
+    <a href=<?= $_SERVER['PHP_SELF']."?admin=customers"?> class="tablinks">Customers</button>
+    <a href=<?= $_SERVER['PHP_SELF']."?admin=orders"?> class="tablinks">Orders</button>
+    <a href=<?= $_SERVER['PHP_SELF']."?admin=stocks"?> class="tablinks">Items</button>
+    <a href=<?= $_SERVER['PHP_SELF']."?admin=logout"?> class="tablinks">Logout</button>
+    </div>
+
     <div class="header">
-    <h1>Dhir Enterprises</h1>    
-    <!-- <img src="./images/login.jpg" class="center"  width="1200" height="400"> -->
-    <h4><a href=<?= $_SERVER['PHP_SELF']."?admin=login"?>> Login</a><h2>
-    <h4><a href=<?= $_SERVER['PHP_SELF']."?admin=customers"?>> View Customers</a><h2>
-    <h4><a href=<?= $_SERVER['PHP_SELF']."?admin=orders"?>>View Orders</a><h2>
-    <h4><a href=<?= $_SERVER['PHP_SELF']."?admin=stocks"?>>View Items</a><h2>
-    <h4><a href=<?= $_SERVER['PHP_SELF']."?admin=logout"?>>Logout</a><h2>
+    <h1>Dhir Enterprises</h1>
+    </div>  
+
     <?php
     }
     

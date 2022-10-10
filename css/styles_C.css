@@ -4,9 +4,9 @@
 html{
     background-color: #301a35;
 } */
-h1{
+header h1{
     font-size: 60px;
-    color: rgb(130, 132, 187);
+    color: rgb(108, 108, 206);
     /* background-image: linear-gradient(to right, #553c9a 45%, #ee4b2b);     */
     text-align:center;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -15,7 +15,7 @@ h1{
     /* height: 90%; */
 }
 body{
-    background-color: rgb(232, 222, 232);
+    background-color: rgb(220, 214, 228);
     /* border: 1px solid black; */
     display: table;
     width: 100%;
@@ -133,3 +133,42 @@ td{
 table#main tr>td:nth-child(5){
     text-align: right;
 }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    /* background-color: #f1f1f1; */
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab a {
+    background-color: inherit;
+    font-size: 16px;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin-right: 16px;
+    transition: 0.3s;
+    font-size: 30px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab a.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }

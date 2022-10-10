@@ -46,7 +46,23 @@ class OrdersDAO  {
             
     }
     
-    static function getOrderOnSearch($order_id, $customer_id) {
+    static function SearchOrderByName($name) {
+        $sql ="SELECT * from orderdetails join customer
+        on orderdetails.customer_id = customer.customer_id
+        join orders on orders.order_id = orderdetails.order_id
+        where customer.name LIKE :name%;";
+
+        self::$db->query($sql);
+
+        self::$db->bind(':name', $name);
+        
+        self::$db->execute();
+
+        return self::$db->resultSet();
+
+    }
+
+    static function SearchOrderById($order_id, $customer_id) {
         $sql ="SELECT orderdetails.OrderID, orders.CustomerID, Date,SUM(Price) as total_price, count(orderdetails.OrderID) as 'number_items'
         FROM orderdetails join orders on
         orderdetails.OrderID = orders.OrderID 
@@ -64,26 +80,23 @@ class OrdersDAO  {
 
     }
 
-    // static function getAdminOrderOnSearch($customer_id) {
-    //     $sql ="SELECT orderdetails.OrderID, orders.CustomerID,
-    //             customer.Name, Date,SUM(Price) as total_price, 
-    //             count(orderdetails.OrderID) as 'number_items' 
-    //             FROM orderdetails join orders on 
-    //             orderdetails.OrderID = orders.OrderID Join Customer on 
-    //             customer.CustomerID = orders.CustomerID 
-    //             where orders.CustomerID =:customer_id
-    //             group by orders.OrderID 
-    //             having SUM(Price)>0;";
+    static function SearchOrderByPhone($order_id, $customer_id) {
+        $sql ="SELECT orderdetails.OrderID, orders.CustomerID, Date,SUM(Price) as total_price, count(orderdetails.OrderID) as 'number_items'
+        FROM orderdetails join orders on
+        orderdetails.OrderID = orders.OrderID 
+        where orders.CustomerID =:customer_id and orders.OrderID =:order_id 
+        group by orders.OrderID;";
 
-    //     self::$db->query($sql);
+        self::$db->query($sql);
 
-    //     self::$db->bind(':customer_id', $customer_id);
+        self::$db->bind(':customer_id', $customer_id);
+        self::$db->bind(':order_id', $order_id);
         
-    //     self::$db->execute();
+        self::$db->execute();
 
-    //     return self::$db->resultSet();
+        return self::$db->resultSet();
 
-    // }
+    }
 
     static function getOrders()  {
 

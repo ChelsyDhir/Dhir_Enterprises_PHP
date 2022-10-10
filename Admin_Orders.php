@@ -43,6 +43,12 @@ if(!empty($_POST)){
 }
 
 OrdersPage::addOrder(CustomerDAO::getCustomers(), ItemDAO::getItems());
+if(!empty($_GET['filterorder'])){
+    if($_GET['filterorder'] == "name")
+    OrdersPage::searchBar(OrdersDAO::SearchOrderByName($_GET['searchorder']));
+}
+
+OrdersPage::searchBar();
 OrdersPage::listAllOrders(OrdersDAO::getOrders());
 
 

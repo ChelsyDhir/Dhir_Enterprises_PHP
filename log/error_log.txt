@@ -1142,3 +1142,16 @@ Stack trace:
 #0 D:\RealWorld(DE)\Dhir\Admin_Orders.php(53): OrdersPage::listAllOrders(Array)
 #1 {main}
   thrown in D:\RealWorld(DE)\Dhir\inc\Pages\OrdersPage.class.php on line 108
+[08-Oct-2022 05:05:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:52
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\CustomerDAO.class.php(50): PDOService->query('SELECT * from C...')
+#1 D:\RealWorld(DE)\Dhir\Admin_Orders.php(45): CustomerDAO::getCustomers()
+#2 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 52
+[10-Oct-2022 10:16:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 4 in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php:86
+Stack trace:
+#0 D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php(86): PDOStatement->execute()
+#1 D:\RealWorld(DE)\Dhir\inc\Utilities\OrdersDAO.class.php(59): PDOService->execute()
+#2 D:\RealWorld(DE)\Dhir\Admin_Orders.php(48): OrdersDAO::SearchOrderByName('')
+#3 {main}
+  thrown in D:\RealWorld(DE)\Dhir\inc\Utilities\PDOService.class.php on line 86
